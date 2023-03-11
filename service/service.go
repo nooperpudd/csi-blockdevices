@@ -8,8 +8,8 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/thecodeteam/gocsi"
-	csictx "github.com/thecodeteam/gocsi/context"
+	"github.com/rexray/gocsi"
+	csictx "github.com/rexray/gocsi/context"
 
 	"github.com/nooperpudd/csi-blockdevices/core"
 )

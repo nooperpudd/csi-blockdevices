@@ -7,7 +7,7 @@ import (
 
 	"github.com/nooperpudd/csi-blockdevices/provider"
 	"github.com/nooperpudd/csi-blockdevices/service"
-	"github.com/thecodeteam/gocsi"
+	"github.com/rexray/gocsi"
 )
 
 // main is ignored when this package is built as a go plug-in
