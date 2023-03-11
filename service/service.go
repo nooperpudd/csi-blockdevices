@@ -64,9 +64,10 @@ func (s *service) BeforeServe(
 		log.WithFields(fields).Infof("configured %s", Name)
 	}()
 
-	if pd, ok := csictx.LookupEnv(ctx, gocsi.EnvVarPrivateMountDir); ok {
-		s.privDir = pd
-	}
+	// remove the dir X_CSI_PRIVATE_MOUNT_DIR
+	//if pd, ok := csictx.LookupEnv(ctx, gocsi.EnvVarPrivateMountDir); ok {
+	//	s.privDir = pd
+	//}
 	if s.privDir == "" {
 		s.privDir = defaultPrivDir
 	}
