@@ -5,8 +5,8 @@ package main
 import (
 	"context"
 
-	"github.com/thecodeteam/csi-blockdevices/provider"
-	"github.com/thecodeteam/csi-blockdevices/service"
+	"github.com/nooperpudd/csi-blockdevices/provider"
+	"github.com/nooperpudd/csi-blockdevices/service"
 	"github.com/thecodeteam/gocsi"
 )
 

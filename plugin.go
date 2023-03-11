@@ -1,4 +1,6 @@
+//go:build linux && plugin
 // +build linux,plugin
+
 //go:generate go generate ./core
 
 package main
@@ -6,8 +8,8 @@ package main
 import "C"
 
 import (
-	"github.com/thecodeteam/csi-blockdevices/provider"
-	"github.com/thecodeteam/csi-blockdevices/service"
+	"github.com/nooperpudd/csi-blockdevices/provider"
+	"github.com/nooperpudd/csi-blockdevices/service"
 )
 
 ////////////////////////////////////////////////////////////////////////////////

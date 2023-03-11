@@ -8,7 +8,7 @@ import (
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
 
-	"github.com/thecodeteam/csi-blockdevices/core"
+	"github.com/nooperpudd/csi-blockdevices/core"
 )
 
 func (s *service) GetSupportedVersions(

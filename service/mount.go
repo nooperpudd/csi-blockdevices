@@ -9,9 +9,9 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/akutz/gofsutil"
 	"github.com/container-storage-interface/spec/lib/go/csi"
 	log "github.com/sirupsen/logrus"
-	"github.com/thecodeteam/gofsutil"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

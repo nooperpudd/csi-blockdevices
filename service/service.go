@@ -11,7 +11,7 @@ import (
 	"github.com/thecodeteam/gocsi"
 	csictx "github.com/thecodeteam/gocsi/context"
 
-	"github.com/thecodeteam/csi-blockdevices/core"
+	"github.com/nooperpudd/csi-blockdevices/core"
 )
 
 const (
@@ -27,7 +27,7 @@ const (
 
 // Manifest is the SP's manifest.
 var Manifest = map[string]string{
-	"url":    "https://github.com/thecodeteam/csi-blockdevices",
+	"url":    "https://github.com/rexray/csi-blockdevices",
 	"semver": core.SemVer,
 	"commit": core.CommitSha32,
 	"formed": core.CommitTime.Format(time.RFC1123),
