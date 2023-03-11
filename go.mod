@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/akutz/gofsutil v0.1.2
-	github.com/container-storage-interface/spec v0.1.0
-	github.com/rexray/gocsi v0.3.3
+	github.com/container-storage-interface/spec v1.0.0
+	github.com/rexray/gocsi v1.0.0
 	github.com/sirupsen/logrus v1.9.0
 	google.golang.org/grpc v1.51.0
 

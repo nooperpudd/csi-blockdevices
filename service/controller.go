@@ -66,7 +66,11 @@ func (s *service) ValidateVolumeCapabilities(
 	*csi.ValidateVolumeCapabilitiesResponse, error) {
 
 	r := &csi.ValidateVolumeCapabilitiesResponse{
-		Supported: true,
+		//Confirmed: "confirmed",
+		Confirmed: &csi.ValidateVolumeCapabilitiesResponse_Confirmed{
+			VolumeCapabilities: req.VolumeCapabilities,
+		},
+		Message: "",
 	}
 
 	_, err := GetDeviceInDir(s.DevDir, req.VolumeId)
@@ -119,12 +123,12 @@ func (s *service) ListVolumes(
 
 	entries := []*csi.ListVolumesResponse_Entry{}
 	for _, v := range vols {
-		vi := &csi.VolumeInfo{
-			Id: v.Name,
+		vi := &csi.Volume{
+			VolumeId: v.Name,
 		}
 		entries = append(entries,
 			&csi.ListVolumesResponse_Entry{
-				VolumeInfo: vi,
+				Volume: vi,
 			})
 
 	}
@@ -142,7 +146,12 @@ func (s *service) GetCapacity(
 
 func (s *service) ControllerProbe(
 	ctx context.Context,
-	req *csi.ControllerProbeRequest) (*csi.ControllerProbeResponse, error) {
 
-	return &csi.ControllerProbeResponse{}, nil
+	// req *csi.ControllerProbeRequest) (*csi.ControllerProbeResponse, error) {
+	//
+	//	return &csi.ControllerProbeResponse{}, nil
+
+	req *csi.ControllerGetCapabilitiesRequest) (*csi.ControllerGetCapabilitiesResponse, error) {
+
+	return &csi.ControllerGetCapabilitiesResponse{}, nil
 }

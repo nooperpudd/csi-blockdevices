@@ -55,9 +55,14 @@ func (s *service) NodeUnpublishVolume(
 
 func (s *service) GetNodeID(
 	ctx context.Context,
-	req *csi.GetNodeIDRequest) (*csi.GetNodeIDResponse, error) {
 
-	return &csi.GetNodeIDResponse{}, nil
+	// req *csi.GetNodeIDRequest) (*csi.GetNodeIDResponse, error) {
+	//
+	//	return &csi.GetNodeIDResponse{}, nil
+
+	req *csi.NodeGetInfoRequest) (*csi.NodeGetInfoResponse, error) {
+
+	return &csi.NodeGetInfoResponse{}, nil
 }
 
 func (s *service) NodeProbe(
